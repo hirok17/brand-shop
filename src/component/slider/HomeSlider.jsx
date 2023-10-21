@@ -2,24 +2,18 @@
 
 const HomeSlider = () => {
     return (
-        <div className="carousel w-full">
-            <div id="slide1" className="carousel-item relative w-full">
-                <img src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg" className="w-full" />
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide4" className="btn btn-circle">❮</a>
-                    <a href="#slide2" className="btn btn-circle">❯</a>
+        <section>
+            <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/tH09csB/clothing-store.jpg)' }}>
+                <div className="hero-overlay bg-black bg-opacity-60"></div>
+                <div className="hero-content text-center text-neutral-content">
+                    <div className="max-w-md">
+                        <h1 className="mb-5 text-5xl font-bold">Most Valuable Fashion Brands</h1>
+                        <p className="mb-5">There are several characteristics that are often associated with luxury brands, including exclusivity, high quality, and exceptional customer service.</p>
+                        <button className="btn text-white bg-[#EA1B25] hover:bg-[#0F233C]">Get Started</button>
+                    </div>
                 </div>
             </div>
-            <div id="slide2" className="carousel-item relative w-full">
-                <img src="https://daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg" className="w-full" />
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide1" className="btn btn-circle">❮</a>
-                    <a href="#slide3" className="btn btn-circle">❯</a>
-                </div>
-            </div>
-            
-            
-        </div>
+        </section>
     );
 };
 

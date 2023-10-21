@@ -12,6 +12,7 @@ import SignUp from './pages/SignUp.jsx'
 import Cart from './pages/Cart'
 import AuthProvider from './component/authprovider/AuthProvider'
 import PrivetOutes from './component/privetOut/PrivetOutes'
+import Products from './component/Products'
 
 const router =createBrowserRouter([
       {
@@ -21,7 +22,8 @@ const router =createBrowserRouter([
         children:[
           {
             path:"/",
-            element:<Home></Home>
+            element:<Home></Home>,
+            loader:()=>fetch('http://localhost:5000/brand')
           },
           {
             path:"/about",
@@ -42,6 +44,11 @@ const router =createBrowserRouter([
           {
             path:"/cart",
             element:<PrivetOutes><Cart></Cart></PrivetOutes>
+          },
+          {
+            path:"/products/:brand",
+            element:<Products></Products>,
+            loader:({params})=>fetch(`http://localhost:5000/products/${params.brand}`)
           }
         ]
       }

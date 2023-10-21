@@ -21,9 +21,10 @@ const Topber = () => {
                             </div>
                             <select className="select select-bordered join-item focus:outline-none">
                                 <option disabled selected>Filter</option>
-                                <option>Sci-fi</option>
-                                <option>Drama</option>
-                                <option>Action</option>
+                                <option>Nike</option>
+                                <option>Adidas</option>
+                                <option>Gucci</option>
+                                <option>Zara</option>
                             </select>
                             <div className="indicator">
                                 <span className="indicator-item badge text-white bg-[#0F233C]">new</span>
