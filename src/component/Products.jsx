@@ -35,8 +35,12 @@ const Products = () => {
 
             {/* slider aera end */}
             <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-9">
+                
             {
+                (data.length > 0) ?
                 data.map(brand=> <Brand key={brand._id} brand={brand}></Brand>)
+                :
+                <h3 className="text-center text-3xl font-semibold text-red-500"> Product Comming Soon</h3>
             }
        </div>
        </section>
