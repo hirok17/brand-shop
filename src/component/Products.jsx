@@ -40,7 +40,7 @@ const Products = () => {
                 (data.length > 0) ?
                 data.map(brand=> <Brand key={brand._id} brand={brand}></Brand>)
                 :
-                <h3 className="text-center text-3xl font-semibold text-red-500"> Product Comming Soon</h3>
+                <h3 className="text-center text-2xl font-semibold text-red-500"> Product Comming Soon</h3>
             }
        </div>
        </section>
