@@ -14,6 +14,7 @@ import AuthProvider from './component/authprovider/AuthProvider'
 import PrivetOutes from './component/privetOut/PrivetOutes'
 import Products from './component/Products'
 import Details from './pages/Details'
+import Update from './pages/Update'
 
 const router =createBrowserRouter([
       {
@@ -55,6 +56,11 @@ const router =createBrowserRouter([
             path:"/products/cart/:id",
             element:<PrivetOutes><Details></Details></PrivetOutes>,
             loader:({params})=>fetch(`https://brand-shop-server-ten-kohl.vercel.app/products/cart/${params.id}`)
+          },
+          {
+            path:"/update/:id",
+            element:<Update></Update>,
+            loader:({params})=>fetch(`https://brand-shop-server-ten-kohl.vercel.app/update/${params.id}`)
           }
         ]
       }
