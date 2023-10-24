@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const Brand = ({ brand }) => {
     return (
@@ -15,7 +16,8 @@ const Brand = ({ brand }) => {
             
                     <div className="flex items-center justify-between">
                         <span className="text-3xl font-bold text-gray-900 dark:text-white">${brand.price}</span>
-                        <button className='btn text-white bg-[#EA1B25] hover:bg-[#0F233C]'>Add to cart</button>
+                        <Link to={`/products/cart/${brand._id}`}><button className='btn text-white bg-[#EA1B25] hover:bg-[#0F233C]'>Details </button></Link>
+                        
                     </div>
                 </div>
             </div>

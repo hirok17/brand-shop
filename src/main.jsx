@@ -13,6 +13,7 @@ import Cart from './pages/Cart'
 import AuthProvider from './component/authprovider/AuthProvider'
 import PrivetOutes from './component/privetOut/PrivetOutes'
 import Products from './component/Products'
+import Details from './pages/Details'
 
 const router =createBrowserRouter([
       {
@@ -23,7 +24,7 @@ const router =createBrowserRouter([
           {
             path:"/",
             element:<Home></Home>,
-            loader:()=>fetch('https://brand-shop-server-7wvf61jfs-kamleshs-projects.vercel.app/brand')
+            loader:()=>fetch('https://brand-shop-server-ten-kohl.vercel.app/brand')
           },
           {
             path:"/about",
@@ -48,7 +49,12 @@ const router =createBrowserRouter([
           {
             path:"/products/:brand",
             element:<Products></Products>,
-            loader:({params})=>fetch(`https://brand-shop-server-7wvf61jfs-kamleshs-projects.vercel.app/products/${params.brand}`)
+            loader:({params})=>fetch(`https://brand-shop-server-ten-kohl.vercel.app/products/${params.brand}`)
+          },
+          {
+            path:"/products/cart/:id",
+            element:<PrivetOutes><Details></Details></PrivetOutes>,
+            loader:({params})=>fetch(`https://brand-shop-server-ten-kohl.vercel.app/products/cart/${params.id}`)
           }
         ]
       }

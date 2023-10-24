@@ -14,7 +14,7 @@ const Upload = () => {
         const productInfo ={name, price, brand, cover, category, rating, description};
         console.log(productInfo);
 
-        fetch('https://brand-shop-server-7wvf61jfs-kamleshs-projects.vercel.app/products', {
+        fetch('https://brand-shop-server-ten-kohl.vercel.app/products', {
             method:'POST',
             headers:{
                 'Content-Type': 'application/json'
