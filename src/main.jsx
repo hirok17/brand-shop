@@ -23,7 +23,7 @@ const router =createBrowserRouter([
           {
             path:"/",
             element:<Home></Home>,
-            loader:()=>fetch('http://localhost:5000/brand')
+            loader:()=>fetch('https://brand-shop-server-7wvf61jfs-kamleshs-projects.vercel.app/brand')
           },
           {
             path:"/about",
@@ -48,7 +48,7 @@ const router =createBrowserRouter([
           {
             path:"/products/:brand",
             element:<Products></Products>,
-            loader:({params})=>fetch(`http://localhost:5000/products/${params.brand}`)
+            loader:({params})=>fetch(`https://brand-shop-server-7wvf61jfs-kamleshs-projects.vercel.app/products/${params.brand}`)
           }
         ]
       }

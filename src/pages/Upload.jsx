@@ -14,7 +14,7 @@ const Upload = () => {
         const productInfo ={name, price, brand, cover, category, rating, description};
         console.log(productInfo);
 
-        fetch('http://localhost:5000/products', {
+        fetch('https://brand-shop-server-7wvf61jfs-kamleshs-projects.vercel.app/products', {
             method:'POST',
             headers:{
                 'Content-Type': 'application/json'
